@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: menu
+  # 配置本地Config Server访问路径
+  cloud:
+    config:
+      uri: http://localhost:8762
+      # 设置客户端优先判断 Config Server 获取是否正常
+      fail-fast: true

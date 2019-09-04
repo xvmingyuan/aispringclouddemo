@@ -1,0 +1,14 @@
+server:
+  port: 8030
+spring:
+  application:
+    name: client
+  thymeleaf:
+    prefix: classpath:/static/
+    suffix: .html
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.136:8761/eureka/,http://192.168.1.136:8771/eureka/,http://192.168.1.136:8781/eureka/
+  instance:
+    prefer-ip-address: true

@@ -11,7 +11,12 @@
     <modules>
         <module>server-center</module>
         <module>configserver</module>
+        <module>menus</module>
         <module>order</module>
+        <module>client</module>
+        <module>nativeconfigserver</module>
+        <module>user</module>
+        <module>account</module>
     </modules>
 
     <parent>
@@ -42,5 +47,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

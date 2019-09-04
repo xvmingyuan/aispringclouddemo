@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xmy.repository.TypeRepository">
+    <resultMap id="typeMap" type="Type">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+    <select id="findAll" resultMap="typeMap">
+        select * from t_type
+</select>
+    <select id="count" resultType="int">
+        select count(id) from t_type
+</select>
+    <select id="findById" parameterType="long" resultMap="typeMap">
+        select * from t_type where id = #{id}
+</select>
+    <insert id="save" parameterType="Type">
+  insert into t_type(name) values(#{name})
+</insert>
+    <update id="update" parameterType="Type">
+        update t_type set name = #{name} where id = #{id}
+    </update>
+    <delete id="deleteById" parameterType="long">
+        delete from t_type where id = #{id}
+    </delete>
+</mapper>

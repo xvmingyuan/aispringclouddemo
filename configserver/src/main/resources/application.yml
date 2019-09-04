@@ -7,10 +7,10 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/xvmingyuan/ispringcloud.git
+          uri: https://github.com/xvmingyuan/aispringclouddemo.git
           search-paths: config
-          username: root
-          password: root
+          username: xvmingyuan
+          password: xxxxxxxx
       label: master
 eureka:
   client:
